@@ -50,6 +50,4 @@ bot.once('spawn', async function() {
 // Fixed event name from 'messagestr' to 'message'
 bot.on('message', function(message) {
   console.log('Received message:', message.toString());
-    mineflayerViewer(bot, { firstPerson: false, port: 3000 });
-      console.log('link : http://localhost:3000');
 });
