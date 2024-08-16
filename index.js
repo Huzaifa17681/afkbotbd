@@ -9,7 +9,7 @@ const options = {
 let playerfollowT = null;
 
 const bot = mineflayer.createBot(options);
-bot.loadPlugin(pathfinder);
+
 bot.once('login', () => {
   console.log('Joined');
   LoginF();
