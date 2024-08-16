@@ -1,8 +1,4 @@
-const { versions } = require('minecraft-data');
 const mineflayer = require('mineflayer');
-const mineflayerViewer = require('prismarine-viewer').mineflayer;
-const { pathfinder, Movements, goals: { GoalFollow } } = require('mineflayer-pathfinder');
-const { Vec3 } = require('vec3');
 
 const options = {
   host: 'mc.blockdrop.org',
@@ -51,3 +47,6 @@ bot.once('spawn', async function() {
 bot.on('message', function(message) {
   console.log('Received message:', message.toString());
 });
+
+
+bot.on('autoeat_error', console.error)
