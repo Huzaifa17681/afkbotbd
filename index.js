@@ -1,5 +1,5 @@
 const mineflayer = require('mineflayer');
-//const keep_alive = require('./keep_alive.js');
+const keep_alive = require('./keep_alive.js');
 const options = {
   host: 'mc.blockdrop.org',
   username: 'zinx',
