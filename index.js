@@ -13,7 +13,7 @@ const options = {
   username: "zinx",
   version: "1.20",
 };
-const keep_alive = require('./keep_alive.js');
+
 let playerfollowT = null;
 
 const bot = mineflayer.createBot(options);
@@ -36,16 +36,16 @@ async function sleep(ms) {
 }
 
 bot.once("spawn", async function () {
-  await sleep(1000);
+  await sleep(4000);
   bot.setQuickBarSlot(4);
-  await sleep(1000);
+  await sleep(4000);
   bot.activateItem();
 
   bot.on("windowOpen", async function (window) {
     // Added async here
-    await sleep(1000);
+    await sleep(4000);
     bot.clickWindow(14, 0, 0);
-    await sleep(1000);
+    await sleep(4000);
     bot.chat("/afk");
   });
 });
