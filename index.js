@@ -45,8 +45,6 @@ bot.once("spawn", async function () {
     // Added async here
     await sleep(4000);
     bot.clickWindow(14, 0, 0);
-    bot.clickWindow(14, 0, 0);
-    bot.clickWindow(14, 0, 0);
     await sleep(4000);
     bot.chat("/afk");
   });
