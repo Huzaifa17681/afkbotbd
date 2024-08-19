@@ -1,6 +1,7 @@
 const { versions } = require("minecraft-data");
 const mineflayer = require("mineflayer");
 const mineflayerViewer = require("prismarine-viewer").mineflayer;
+const antiafk = require("mineflayer-antiafk");
 const {
   pathfinder,
   Movements,
@@ -46,7 +47,9 @@ bot.once("spawn", async function () {
     await sleep(4000);
     bot.clickWindow(14, 0, 0);
     await sleep(4000);
-    bot.chat("/afk");
+    bot.chat("/msg GamerBoy321123 im on !!");
+    bot.afk.setOptions({ fishing: false }); //disables fishing
+    bot.afk.start();
   });
 });
 
