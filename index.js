@@ -1,24 +1,12 @@
-const { versions } = require("minecraft-data");
-const mineflayer = require("mineflayer");
-const mineflayerViewer = require("prismarine-viewer").mineflayer;
-const antiafk = require("mineflayer-antiafk");
-const {
-  pathfinder,
-  Movements,
-  goals: { GoalFollow },
-} = require("mineflayer-pathfinder");
-const { Vec3 } = require("vec3");
 
+const mineflayer = require("mineflayer");
 const options = {
   host: "mc.blockdrop.org",
   username: "zinx",
   version: "1.20",
 };
 
-let playerfollowT = null;
-
 const bot = mineflayer.createBot(options);
-bot.loadPlugin(pathfinder);
 bot.once("login", () => {
   console.log("Joined");
   LoginF();
@@ -46,10 +34,9 @@ bot.once("spawn", async function () {
     // Added async here
     await sleep(4000);
     bot.clickWindow(14, 0, 0);
+    bot.clickWindow(14, 0, 0);
     await sleep(4000);
     bot.chat("/msg GamerBoy321123 im on !!");
-    bot.afk.setOptions({ fishing: false }); //disables fishing
-    bot.afk.start();
   });
 });
 
