@@ -1,5 +1,6 @@
 const mineflayer = require("mineflayer");
 //const inventoryViewer = require('mineflayer-web-inventory')
+const keep_alive  = require('./keep_alive.js")
 const options = {
   host: "mc.blockdrop.org",
   username: "villagers",
